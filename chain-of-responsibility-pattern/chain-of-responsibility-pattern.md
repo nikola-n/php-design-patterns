@@ -1,8 +1,8 @@
 #The chain of responsibility pattern
 
 It gives a possibility to chain object calls while giving each of these objects
-to ability to end the execution and handle the request or if can't handle the request
-it will send you a request of the chain and the next object will have the chance to do the same thing
+the ability to end the execution and handle the request or if can't handle the request
+it will send you a request of the chain and the next object will have the chance to do the same thing.
 
 Benefit: client can make a request without knowing how the request is going to be handled.
 
