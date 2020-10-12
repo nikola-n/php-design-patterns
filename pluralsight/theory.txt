@@ -1,0 +1,87 @@
+Object-oriented are design principles принципи:
+
+-Наследување (Inheritance)
+-Полиморфизам (Polymorphism)
+-Абстракција (Abstraction)
+-Енкапсулација (Encapsulation)
+
+
+Дизајн патерни се решенија на real-world проблеми,
+кои што настануваат при дизајниранње на софтвер, во форма на
+blueprint/план, тестирани, докажани и бездебни за да ги следиме.
+
+Тие се делат на три групи:
+
+1. Creational design patterns - provides object creation mechanism
+-FACTORY METHOD
+-Abstract Factory
+-Builder
+-Prototype
+-SINGLETON
+
+2. Structural design patterns - explains how to assemble objects and classes into larger, flexible structures
+-ADAPTER
+-Bridge
+-Composite
+-DECORATOR
+-Facade
+-Flyweight
+-Proxy
+
+3. Behavioral design patterns - deals with algorithms and assignment of responsibilities between objects
+-CHAIN OF RESPONSIBILITY
+-Command
+-Iterator
+-Mediator
+-Memento
+-OBSERVER
+-State
+-STRATEGY
+-TEMPLATE METHOD
+-Visitor
+
+Алгоритмите се исто така решение на некој познат проблем, но тие имаат
+точно дефинирани чекори за да се постигне целта. (да се реши проблемот)
+
+Патерните се висок левел на решение или објаснување на проблемот.
+Секој дизајн патерн е како план кој што можеме да го кустоматизираме/измениме
+за да решиме некој посебен наш проблем.
+
+Design principles vs Design patterns
+
+Use design patter to achieve the goals set by the design principles
+
+1. Creational pattern - Дава механизам на креирање на различни објекти, кои ја зголемуваат
+флексибилноста и реупотребата на постоечкиот код.
+-Factory Method: Дава интерфејс за креирање на објекти во суперкласи, но овозможува
+субкласите да го менуваат типот на објектите кои што ќе бидат креирани.
+
+Пр. Имаме вебсајт за курир и транспортот се врши со камиони. Со камиони океј се движел бизнисот
+и сега сакаме да додадеме транспорт со авион.
+Цел кон е сега во Truck класа и треба да направиме голема промена ако сакаме да додадеме уште еден објект.
+Подоцна може ќе сакаме да дододеме и брод.
+Овој метод енкапслуира се што варира.
+Структура на factory method:
+Имаме creator class која е апстракна класа (abstract base class).
+и Продукт (interface) која што содржи само инстанцирани методи без body of course.
+Наместо во конструкторот на апстркната класа properties се креираат
+во специјален abstract factory method ex. createProduct(): Product
+Овој метод ќе го враќа интерфејсот.
+Во сите КРЕАТОР останати(суб) класи кои ја наследуваат главната креатор апстракна класа ќе можеме да го override -неме овој метод и да го смениме
+типот на продукт кои што го вракја.
+Тие суб-класи се нарекуваат concrete creators.
+Се креираат и ПРОДУКТ субкласи кои ќе го имплементираат познатиот интерфејс Product. Во овој интерфејс ќе се извршуваат
+различни операции од методите кои ги содржи интерфејсот. ex. performTasks();
+Во апстрактана КРЕАТОР главна класа имаме функција преку која подоцна ќе ги повикуваме објектите.
+Во неа една варијабла се декларира на апстракниот метод и од истата се повикуваат
+сите функции кои се наоѓаат во интерфејсот.
+На крај имаме посебен метод кој што ќе прима КРЕАТОР апстракна класа или субкласа
+и ќе го повика вториот метод од апстракната класа каде се повикуваат
+операциите.
+
+When to use it:
+Uncertain about the type of objects we might have to create
+and work on.
+----
+It separates the object creation code from code which uses
+the product
