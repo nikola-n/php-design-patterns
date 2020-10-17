@@ -130,3 +130,17 @@ weShare() и секаде кај што ние го имаме кодот тре
 (АПИ) и наш апп код. (интерфејс)
 -Адаптер патерн прави постоечки или нови АПИ да работат без да се промени
 постоечкиот код. Само треба да се смени во адаптерот.
+------------
+-Декоратор
+Дава ново однесување на објектите со ставање на објектите
+во специјали врапер објекти кои што ги содржат овие однесувања.
+
+Гифт риал ворлд сценарио
+Пица пример.
+
+When is used:
+To assign behaviours to objects dynamically, without modifying
+the code that uses the object
+
+Used when is it complex or not possible to extend the
+object's behaviour using inheritance.
